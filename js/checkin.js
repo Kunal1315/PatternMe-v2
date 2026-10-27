@@ -1,1 +1,13 @@
-document.addEventListener('DOMContentLoaded',()=>{if(!pmRequireAuth())return;pmNav('checkin');pmStartReminderChecks();const form=document.getElementById('entryForm'),date=document.getElementById('entryDate'),msg=document.getElementById('message');date.value=new URLSearchParams(location.search).get('date')||pmToday();function load(){const v=pmEntries()[date.value]||{};['sleep','study','screen','exercise','focus','mood','notes'].forEach(k=>document.getElementById(k).value=v[k]??'');document.getElementById('dateHint').textContent=v.updatedAt?'An entry exists for this date. Saving will update it.':'No entry saved for this date yet.';msg.classList.add('d-none')}date.addEventListener('change',load);document.getElementById('clearBtn').addEventListener('click',()=>{form.reset();date.value=pmToday();load()});form.addEventListener('submit',e=>{e.preventDefault();const d=date.value,value=id=>document.getElementById(id).value;pmUpdateUser(u=>{u.entries=u.entries||{};u.entries[d]={sleep:Number(value('sleep')),study:Number(value('study')),screen:Number(value('screen')),exercise:Number(value('exercise')),focus:Number(value('focus')),mood:value('mood'),notes:value('notes').trim(),updatedAt:new Date().toISOString()}});msg.className='alert alert-success';msg.textContent=`Check-in for ${pmFormatDate(d)} saved successfully.`;document.getElementById('dateHint').textContent='Saved. You can still edit this date.'});load()});
+document.addEventListener('DOMContentLoaded',()=>{if(!pmRequireAuth())return;pmNav('checkin');
+    pmStartReminderChecks();
+    const form=document.getElementById('entryForm'),date=document.getElementById('entryDate'),msg=document.getElementById('message');
+    date.value=new URLSearchParams(location.search).get('date')||pmToday();function load(){const v=pmEntries()[date.value]||{};
+    ['sleep','study','screen','exercise','focus','mood','notes'].forEach(k=>document.getElementById(k).value=v[k]??'');
+    document.getElementById('dateHint').textContent=v.updatedAt?'An entry exists for this date. Saving will update it.':'No entry saved for this date yet.';msg.classList.add('d-none')}date.addEventListener('change',load);
+    document.getElementById('clearBtn').addEventListener('click',()=>{form.reset();date.value=pmToday();load()});
+    form.addEventListener('submit',e=>{e.preventDefault();
+        
+        const d=date.value,value=id=>document.getElementById(id).value;pmUpdateUser(u=>{u.entries=u.entries||{};
+            u.entries[d]={sleep:Number(value('sleep')),study:Number(value('study')),screen:Number(value('screen')),exercise:Number(value('exercise')),focus:Number(value('focus')),mood:value('mood'),notes:value('notes').trim(),updatedAt:new Date().toISOString()}});
+            msg.className='alert alert-success';msg.textContent=`Check-in for ${pmFormatDate(d)} saved successfully.`;
+            document.getElementById('dateHint').textContent='Saved. You can still edit this date.'});load()});

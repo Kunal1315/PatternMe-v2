@@ -1,1 +1,11 @@
-.habit-list{display:grid;gap:12px}.habit-actions{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.habit-list {
+    display: grid;
+    gap: 12px
+}
+
+.habit-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-left: auto
+}

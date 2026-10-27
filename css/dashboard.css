@@ -1,1 +1,10 @@
-.welcome-panel{border-radius:24px;padding:clamp(22px,4vw,36px);color:#fff;background:radial-gradient(circle at 90% 20%,#ffffff35,transparent 24%),linear-gradient(120deg,#5140cb,#8a79f6)}.welcome-panel p{color:#f0edff}
+.welcome-panel {
+    border-radius: 24px;
+    padding: clamp(22px, 4vw, 36px);
+    color: #fff;
+    background: radial-gradient(circle at 90% 20%, #ffffff35, transparent 24%), linear-gradient(120deg, #5140cb, #8a79f6)
+}
+
+.welcome-panel p {
+    color: #f0edff
+}
