@@ -151,12 +151,12 @@ body {
     font-weight: 700
 }
 
-.footer {
+/* .footer {
     padding: 24px 0 8px;
     text-align: center;
     color: var(--pm-muted);
     font-size: .82rem
-}
+} */
 
 .table {
     --bs-table-bg: transparent
