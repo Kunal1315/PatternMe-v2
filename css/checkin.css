@@ -2,3 +2,9 @@
     font-weight: 800;
     margin-bottom: 1rem
 }
+
+footer {
+    position: fixed;
+    position: absolute;
+    bottom: 0;
+}

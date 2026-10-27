@@ -5,3 +5,9 @@
     border: 1px solid #e8e4ff;
     margin-bottom: 10px
 }
+
+footer {
+    position: fixed;
+    position: absolute;
+    bottom: 0;
+}

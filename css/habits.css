@@ -9,3 +9,9 @@
     flex-wrap: wrap;
     margin-left: auto
 }
+
+footer {
+    position: fixed;
+    position: absolute;
+    bottom: 0;
+}

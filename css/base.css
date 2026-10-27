@@ -359,3 +359,9 @@ body {
         padding: .45rem .65rem !important
     }
 }
+
+footer {
+    position: fixed;
+    position: absolute;
+    bottom: 0;
+}
