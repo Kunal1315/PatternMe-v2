@@ -1,0 +1,19 @@
+/* Registration form validation states */
+.form-field .validation-message {
+  display: block;
+  min-height: 0;
+  margin-top: .25rem;
+  color: #c62828;
+  font-size: .82rem;
+}
+.form-field.error .form-control {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 .15rem rgba(220, 53, 69, .10);
+}
+.form-field.success .form-control {
+  border-color: #198754;
+  box-shadow: 0 0 0 .15rem rgba(25, 135, 84, .08);
+}
+.form-field.success .validation-message { color: #198754; }
+.form-field .form-control:focus { box-shadow: 0 0 0 .2rem rgba(105, 87, 232, .15); }
+.password-hint { color: #77758a; font-size: .8rem; line-height: 1.45; }
