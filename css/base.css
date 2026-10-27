@@ -360,8 +360,16 @@ body {
     }
 }
 
-footer {
-    position: fixed;
-    position: absolute;
-    bottom: 0;
+
+/* Footer sits at the bottom without covering cards */
+body > footer {
+    position: static !important;
+    inset: auto !important;
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: auto;
+    padding: 16px 0;
+    box-sizing: border-box;
+    background: transparent;
+    z-index: auto;
 }

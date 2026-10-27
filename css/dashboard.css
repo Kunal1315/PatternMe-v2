@@ -9,8 +9,14 @@
     color: #f0edff
 }
 
+
+
 footer {
     position: fixed;
-    position: absolute;
-    bottom: 0;
+    
+}
+
+.page-wrap {
+    height: 100vh;
+    overflow:visible;
 }
